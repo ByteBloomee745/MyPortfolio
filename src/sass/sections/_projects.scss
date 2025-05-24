@@ -1,0 +1,128 @@
+#projects {
+  padding: 6rem 0;
+  background-color: $gris-clair; // #D9D9D9
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: $bleu-marine;
+  }
+
+  .project-wrapper {
+    &__text {
+      padding: 2rem;
+      background: $blanc;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      
+      &-title {
+        font-family: 'Playfair Display', serif;
+        color: $bleu-marine;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    .row {
+      margin-bottom: 4rem;
+      align-items: center;
+      
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .cta-btn--hero {
+      background: $bleu-marine;
+      color: $blanc;
+      margin-right: 1rem;
+      
+      &:hover {
+        background: darken($bleu-marine, 10%);
+      }
+    }
+
+    .text-color-main {
+      color: $bleu-marine;
+      border: 1px solid $bleu-marine;
+      
+      &:hover {
+        background: $bleu-marine;
+        color: $blanc;
+      }
+    }
+
+    .thumbnail {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 3px solid $blanc;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+// sass/sections/_projects.scss
+[data-theme="dark"] {
+  #projects {
+    background-color: #121212; // Fond plus sombre que --bg-secondary
+
+    .section-title {
+      color: #f0f0f0 !important;
+      text-shadow: 0 0 10px rgba(76, 201, 240, 0.3);
+    }
+
+    .project-wrapper__text {
+      color: #e0e0e0 !important;
+
+      .project-wrapper__text-title {
+        color: var(--accent-color) !important;
+      }
+    }
+
+    .thumbnail {
+      background-color: #1e1e1e;
+      border: 1px solid #333 !important;
+      box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+
+      &:hover {
+        box-shadow: 
+          0 8px 25px rgba(0, 0, 0, 0.6),
+          inset 0 0 0 1px var(--accent-color) !important;
+      }
+    }
+
+    .cta-btn--hero {
+      background-color: var(--accent-color) !important;
+      color: #121212 !important;
+      border: 1px solid var(--accent-color) !important;
+
+      &:hover {
+        background-color: lighten(#4361ee, 5%) !important;
+      }
+    }
+
+    .cta-btn--resume {
+      color: var(--accent-color) !important;
+      border-color: var(--accent-color) !important;
+
+      &:hover {
+        background-color: rgba(76, 201, 240, 0.1) !important;
+      }
+    }
+  }
+}

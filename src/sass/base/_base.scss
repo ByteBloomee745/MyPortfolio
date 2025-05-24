@@ -1,0 +1,18 @@
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-secondary;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
